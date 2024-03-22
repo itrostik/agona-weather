@@ -17,7 +17,7 @@ export default function Page({params}: {params: {id: string}}) {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [searchValue, setSearchValue] = useState<string>('');
 
-  const debouncedSearchValue = useDebounce(searchValue, 200);
+  const debouncedSearchValue = useDebounce(searchValue, 500);
 
   const {isPending, data, isFetching, isError} = useQuery<CitiesType[]>({
     queryKey: ['cities', debouncedSearchValue],

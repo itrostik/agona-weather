@@ -13,7 +13,7 @@ import Error from '@/components/Error/Error';
 
 export default function Home() {
   const [searchValue, setSearchValue] = useState('');
-  const debouncedSearchValue = useDebounce(searchValue, 200);
+  const debouncedSearchValue = useDebounce(searchValue, 500);
 
   const {isPending, data, isFetching, isError} = useQuery<CountriesType[]>({
     queryKey: ['countries', debouncedSearchValue],
