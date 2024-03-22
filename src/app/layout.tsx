@@ -1,6 +1,8 @@
 import type {Metadata} from 'next';
 import {Montserrat} from 'next/font/google';
 import React from 'react';
+import TanStackProvider from '@/providers/QueryClientProvider';
+import '../styles/global.scss';
 
 const inter = Montserrat({subsets: ['latin']});
 
@@ -15,8 +17,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en'>
-      <body className={inter.className}>{children}</body>
-    </html>
+    <TanStackProvider>
+      <html lang='en'>
+        <body className={inter.className}>{children}</body>
+      </html>
+    </TanStackProvider>
   );
 }

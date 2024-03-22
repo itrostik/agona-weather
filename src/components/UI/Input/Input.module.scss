@@ -1,0 +1,19 @@
+.label {
+  border-radius: 5px;
+  width: 500px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border: 1px solid #6f6f6f;
+  &:focus-within{
+    border: 1px solid #009dff;
+    .input::placeholder{
+      color: #009dff;
+    }
+  }
+}
+.input{
+  padding: 5px 0;
+  width: 500px;
+}
