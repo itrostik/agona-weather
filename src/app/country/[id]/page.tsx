@@ -27,6 +27,7 @@ export default function Page({params}: {params: {id: string}}) {
         namePrefix: debouncedSearchValue,
       }),
     placeholderData: keepPreviousData,
+    refetchOnWindowFocus: false,
   });
 
   const handleSearchChange = (event: ChangeEvent<HTMLInputElement>) => {
