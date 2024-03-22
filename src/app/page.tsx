@@ -22,6 +22,7 @@ export default function Home() {
         namePrefix: debouncedSearchValue,
       }),
     placeholderData: keepPreviousData,
+    refetchOnWindowFocus: false,
   });
 
   const handleSearchChange = (event: ChangeEvent<HTMLInputElement>) => {
